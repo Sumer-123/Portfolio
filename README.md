@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal portfolio website! This site serves as a central hub for my Data Engineering projects, technical skills, academic background, and professional experience.
 
-🔗 <a href="https://Sumer-123.github.io" target="_blank" style="background-color: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">View Live Website Here</a>
+🔗 <a href="https://sumer-123.github.io/Portfolio" target="_blank" style="background-color: #0077b5; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">View Live Website Here</a>
 
 ---
 
