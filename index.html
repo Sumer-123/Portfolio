@@ -95,7 +95,7 @@
 										border-radius: 8px;
 										transition: all 0.3s ease-in-out;
 										box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-										cursor: pointer; /* Tells the user it's clickable */
+										cursor: pointer;
 									}
 									.project-arch-img:hover {
 										transform: scale(1.03);
@@ -104,11 +104,11 @@
 								</style>
 								
 								<h3>1. BidLock: Distributed Real-Time Bidding Engine</h3>
-								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/bidlock.png')">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/bidlock.png', event)">
 									<img src="images/bidlock.png" alt="BidLock Architecture" class="project-arch-img" />
 								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
-									<a href="#" class="button small" onclick="openModal('images/bidlock.png'); return false;">Click to view img</a>
+									<a href="#" class="button small" onclick="openModal('images/bidlock.png', event); return false;">Click to view img</a>
 								</div>
 								
 								<p><strong>Tech Stack:</strong> Kafka, Spark Structured Streaming, Redis, Docker.<br>
@@ -124,11 +124,11 @@
 								<hr />
 
 								<h3>2. ShopPulse: Real-Time E-Commerce Data Lakehouse</h3>
-								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/shoppulse.png')">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/shoppulse.png', event)">
 									<img src="images/shoppulse.png" alt="ShopPulse Architecture" class="project-arch-img" />
 								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
-									<a href="#" class="button small" onclick="openModal('images/shoppulse.png'); return false;">Click to view img</a>
+									<a href="#" class="button small" onclick="openModal('images/shoppulse.png', event); return false;">Click to view img</a>
 								</div>
 
 								<p><strong>Tech Stack:</strong> AWS S3, Delta Lake, PySpark.<br>
@@ -143,11 +143,11 @@
 								<hr />
 
 								<h3>3. Modern Data Warehouse Pipeline</h3>
-								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/warehouse.png')">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/warehouse.png', event)">
 									<img src="images/warehouse.png" alt="Warehouse Architecture" class="project-arch-img" />
 								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
-									<a href="#" class="button small" onclick="openModal('images/warehouse.png'); return false;">Click to view img</a>
+									<a href="#" class="button small" onclick="openModal('images/warehouse.png', event); return false;">Click to view img</a>
 								</div>
 
 								<p><strong>Tech Stack:</strong> dbt, DuckDB, ELT, Data Modeling.<br>
@@ -241,24 +241,20 @@
 
 		<div id="bg"></div>
 
-		<div id="imageModal" style="display:none; position:fixed; z-index:100000; left:0; top:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.85); backdrop-filter:blur(5px); align-items:center; justify-content:center; flex-direction:column;">
-			<span onclick="closeModal()" style="position:absolute; top:30px; right:40px; color:white; font-size:50px; font-weight:bold; cursor:pointer;">&times;</span>
-			<img id="modalImage" style="max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+		<div id="imageModal" style="display:none; position:fixed; z-index:100000; left:0; top:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.85); backdrop-filter:blur(5px); align-items:center; justify-content:center; flex-direction:column;" onclick="if(event.target === this) { event.stopPropagation(); closeModal(); }">
+			<span onclick="event.stopPropagation(); closeModal();" style="position:absolute; top:30px; right:40px; color:white; font-size:50px; font-weight:bold; cursor:pointer;">&times;</span>
+			<img id="modalImage" style="max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.5);" onclick="event.stopPropagation();">
 		</div>
+		
 		<script>
-			function openModal(src) {
+			function openModal(src, event) {
+				// This stops the website template from thinking you clicked the background
+				if (event) event.stopPropagation(); 
 				document.getElementById('modalImage').src = src;
 				document.getElementById('imageModal').style.display = 'flex';
 			}
 			function closeModal() {
 				document.getElementById('imageModal').style.display = 'none';
-			}
-			// Closes the modal if you click anywhere in the dark background
-			window.onclick = function(event) {
-				var modal = document.getElementById('imageModal');
-				if (event.target == modal) {
-					closeModal();
-				}
 			}
 		</script>
 
