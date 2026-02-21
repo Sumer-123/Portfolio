@@ -36,7 +36,22 @@
 
 						<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/My_Photo 2.png" alt="Sumer Shinalkar" /></span>
+								
+								<style>
+									.profile-card {
+										background-color: #ffffff;
+										padding: 12px;
+										border-radius: 12px;
+										box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+										max-width: 300px; /* Keeps the portrait a reasonable size */
+										width: 100%;
+										display: block;
+										margin: 0 auto 2rem auto; /* Centers the image */
+									}
+								</style>
+								
+								<img src="images/My_Photo 2.png" alt="Sumer Shinalkar" class="profile-card" />
+								
 								<p>Hi, I'm Sumer. I am an M.Tech Data Science student at COEP and an AWS-Trained Data Engineer. I have hands-on experience architecting scalable ETL pipelines and real-time data systems using Kafka, Spark, Delta Lake, dbt, DuckDB, and AWS Cloud. With a proven ability to optimize query performance and build robust architectures, I am currently seeking opportunities to leverage my skills in Big Data Engineering.</p>
 								
 								<h3 class="major">Education</h3>
@@ -65,16 +80,10 @@
 
 								<style>
 									.project-arch-img {
-										/* Added white background, padding, and constraints to match the video style */
-										background-color: #ffffff;
-										padding: 20px;
-										border-radius: 10px;
+										border-radius: 8px;
 										transition: all 0.3s ease-in-out;
-										box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+										box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 										cursor: pointer;
-										width: 100%;
-										max-height: 400px;
-										object-fit: contain;
 									}
 									.project-arch-img:hover {
 										transform: scale(1.03);
