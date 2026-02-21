@@ -36,7 +36,7 @@
 
 						<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/My_Photo 2.png" alt="Sumer Shinalkar" /></span>
+								<span class="image main"><img src="images/My_Photo 2.png" alt="Sumer Shinalkar" style="max-height: 350px; object-fit: cover; object-position: center top;" /></span>
 								<p>Hi, I'm Sumer. I am an M.Tech Data Science student at COEP and an AWS-Trained Data Engineer. I have hands-on experience architecting scalable ETL pipelines and real-time data systems using Kafka, Spark, Delta Lake, dbt, DuckDB, and AWS Cloud. With a proven ability to optimize query performance and build robust architectures, I am currently seeking opportunities to leverage my skills in Big Data Engineering.</p>
 								
 								<h3 class="major">Education</h3>
@@ -64,6 +64,8 @@
 								<h2 class="major">Projects</h2>
 								
 								<h3>1. BidLock: Distributed Real-Time Bidding Engine</h3>
+								<span class="image fit" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;"><img src="images/bidlock.gif" alt="BidLock Architecture Diagram" /></span>
+								
 								<p><strong>Tech Stack:</strong> Kafka, Spark Structured Streaming, Redis, Docker.<br>
 								<strong>Key Achievements:</strong> Architected a negotiation platform handling concurrent user bids with sub-millisecond latency using Redis for state. Engineered a Spark Structured Streaming pipeline to process real-time events, enforcing business logic validation. Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.<br>
 								<strong>Challenge Solved:</strong> Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.
@@ -77,6 +79,8 @@
 								<hr />
 
 								<h3>2. ShopPulse: Real-Time E-Commerce Data Lakehouse</h3>
+								<span class="image fit" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;"><img src="images/shoppulse.gif" alt="ShopPulse Architecture Diagram" /></span>
+								
 								<p><strong>Tech Stack:</strong> AWS S3, Delta Lake, PySpark.<br>
 								<strong>Key Achievements:</strong> Built a scalable ETL pipeline ingesting high-velocity clickstream logs via Kafka and Spark Streaming into a Delta Lake for ACID-compliant analytics. Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques like Partitioning and Z-Ordering.<br>
 								<strong>Challenge Solved:</strong> Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques.
@@ -89,6 +93,8 @@
 								<hr />
 
 								<h3>3. Modern Data Warehouse Pipeline</h3>
+								<span class="image fit" style="margin-bottom: 1rem; border-radius: 8px; overflow: hidden;"><img src="images/warehouse.gif" alt="Warehouse Architecture Diagram" /></span>
+								
 								<p><strong>Tech Stack:</strong> dbt, DuckDB, ELT, Data Modeling.<br>
 								<strong>Key Achievements:</strong> Developed a modular ELT pipeline using DuckDB for high-performance local compute and dbt for SQL-based transformations and testing. Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.<br>
 								<strong>Challenge Solved:</strong> Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.
@@ -188,4 +194,3 @@
 
 	</body>
 </html>
-
