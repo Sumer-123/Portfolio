@@ -36,7 +36,7 @@
 
 						<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/My_Photo 2.png" alt="Sumer Shinalkar" /></span>
+								<span class="image main"><img src="images/My_Photo 2.png" alt="Sumer Shinalkar" style="max-height: 350px; object-fit: cover; object-position: center top;" /></span>
 								<p>Hi, I'm Sumer. I am an M.Tech Data Science student at COEP and an AWS-Trained Data Engineer. I have hands-on experience architecting scalable ETL pipelines and real-time data systems using Kafka, Spark, Delta Lake, dbt, DuckDB, and AWS Cloud. With a proven ability to optimize query performance and build robust architectures, I am currently seeking opportunities to leverage my skills in Big Data Engineering.</p>
 								
 								<h3 class="major">Education</h3>
@@ -46,24 +46,74 @@
 								</ul>
 
 								<h3 class="major">Technical Skills</h3>
-								<ul>
-									<li><strong>Big Data:</strong> Apache Spark, Kafka, Delta Lake, DuckDB</li>
-									<li><strong>Cloud (AWS):</strong> Lambda, S3, Glue, EventBridge, IAM</li>
-									<li><strong>Languages:</strong> Python (Pandas, PySpark), SQL (CTEs, Window Functions)</li>
-									<li><strong>DevOps:</strong> Docker, Airflow, dbt, Git</li>
-								</ul>
-			
 								
+								<style>
+									.skill-badge {
+										display: inline-block;
+										background-color: rgba(77, 184, 255, 0.1);
+										color: #4db8ff;
+										border: 1px solid rgba(77, 184, 255, 0.4);
+										padding: 6px 14px;
+										border-radius: 20px;
+										margin: 0 6px 10px 0;
+										font-size: 0.85em;
+										font-weight: bold;
+										transition: all 0.3s ease;
+									}
+									.skill-badge:hover {
+										background-color: #4db8ff;
+										color: white;
+										transform: translateY(-3px);
+										box-shadow: 0 5px 15px rgba(77, 184, 255, 0.4);
+									}
+								</style>
+
+								<div style="margin-bottom: 2rem;">
+									<span class="skill-badge">Apache Spark</span>
+									<span class="skill-badge">Kafka</span>
+									<span class="skill-badge">Delta Lake</span>
+									<span class="skill-badge">DuckDB</span>
+									<span class="skill-badge">AWS Lambda</span>
+									<span class="skill-badge">AWS S3 & Glue</span>
+									<span class="skill-badge">Python (PySpark)</span>
+									<span class="skill-badge">SQL</span>
+									<span class="skill-badge">Docker</span>
+									<span class="skill-badge">Airflow</span>
+									<span class="skill-badge">dbt</span>
+								</div>
+			
 								<ul class="actions">
 									<li><a href="Sumer_Shinalkar.pdf" target="_blank" class="button primary icon solid fa-download">Download Resume</a></li>
 								</ul>
-							
 							</article>
 
 						<article id="work">
 								<h2 class="major">Projects</h2>
+
+								<style>
+									.arch-img {
+										border-radius: 8px;
+										transition: all 0.4s ease;
+										box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+										/* This creates the continuous floating effect */
+										animation: floatImage 4s ease-in-out infinite;
+									}
+									.arch-img:hover {
+										/* This zooms and adds a blue glow on hover */
+										transform: scale(1.03) !important;
+										box-shadow: 0 10px 25px rgba(77, 184, 255, 0.4);
+										/* Pauses the floating when they hover to look closely */
+										animation-play-state: paused; 
+									}
+									@keyframes floatImage {
+										0% { transform: translateY(0px); }
+										50% { transform: translateY(-8px); }
+										100% { transform: translateY(0px); }
+									}
+								</style>
 								
 								<h3>1. BidLock: Distributed Real-Time Bidding Engine</h3>
+								<span class="image fit" style="margin-bottom: 1rem;"><img src="images/bidlock.png" alt="BidLock Architecture Diagram" class="arch-img" /></span>
 								<p><strong>Tech Stack:</strong> Kafka, Spark Structured Streaming, Redis, Docker.<br>
 								<strong>Key Achievements:</strong> Architected a negotiation platform handling concurrent user bids with sub-millisecond latency using Redis for state. Engineered a Spark Structured Streaming pipeline to process real-time events, enforcing business logic validation. Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.<br>
 								<strong>Challenge Solved:</strong> Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.
@@ -77,6 +127,7 @@
 								<hr />
 
 								<h3>2. ShopPulse: Real-Time E-Commerce Data Lakehouse</h3>
+								<span class="image fit" style="margin-bottom: 1rem;"><img src="images/shoppulse.png" alt="ShopPulse Architecture Diagram" class="arch-img" /></span>
 								<p><strong>Tech Stack:</strong> AWS S3, Delta Lake, PySpark.<br>
 								<strong>Key Achievements:</strong> Built a scalable ETL pipeline ingesting high-velocity clickstream logs via Kafka and Spark Streaming into a Delta Lake for ACID-compliant analytics. Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques like Partitioning and Z-Ordering.<br>
 								<strong>Challenge Solved:</strong> Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques.
@@ -89,6 +140,7 @@
 								<hr />
 
 								<h3>3. Modern Data Warehouse Pipeline</h3>
+								<span class="image fit" style="margin-bottom: 1rem;"><img src="images/warehouse.png" alt="Warehouse Architecture Diagram" class="arch-img" /></span>
 								<p><strong>Tech Stack:</strong> dbt, DuckDB, ELT, Data Modeling.<br>
 								<strong>Key Achievements:</strong> Developed a modular ELT pipeline using DuckDB for high-performance local compute and dbt for SQL-based transformations and testing. Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.<br>
 								<strong>Challenge Solved:</strong> Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.
@@ -138,7 +190,6 @@
 								<p>
 									<strong>Email:</strong> <a href="mailto:shinalkarsumer@gmail.com">shinalkarsumer@gmail.com</a><br>
 									<strong>Phone:</strong> +91 8390302819<br>
-									
 								</p>
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/sumer-shinalkar-675a63209" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -146,7 +197,6 @@
 									<li><a href="mailto:shinalkarsumer@gmail.com" title="shinalkarsumer@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 									
-
 								<form method="post" action="https://formspree.io/f/xeellroo">
 									<div class="fields">
 										<div class="field half">
@@ -188,5 +238,3 @@
 
 	</body>
 </html>
-
-
