@@ -39,11 +39,11 @@
 								<style>
 									.profile-img-centered {
 										border-radius: 12px; 
-										box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-										max-width: 300px;
+										box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+										max-width: 300px; 
 										width: 100%;
 										display: block;
-										margin: 0 auto 2rem auto;
+										margin: 0 auto 2rem auto; 
 									}
 								</style>
 								<img src="images/My_Photo 2.png" alt="Sumer Shinalkar" class="profile-img-centered" />
@@ -68,53 +68,34 @@
 						<article id="work">
 								<h2 class="major">Projects</h2>
 								<style>
-									.arch-wrapper {
-										position: relative;
-										overflow: hidden;
-										background: #fff;
-										border-radius: 10px;
-										padding: 20px;
-										box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-										margin-bottom: 0.5rem;
-										cursor: pointer;
-									}
 									.project-arch-img {
-										display: block;
+										background-color: #ffffff;
+										padding: 20px;
+										border-radius: 10px;
+										transition: all 0.3s ease-in-out;
+										box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+										cursor: pointer;
 										width: 100%;
-										height: auto;
-										transition: transform 0.3s ease;
-										clip-path: inset(100% 0 0 0); 
+										max-height: 400px;
+										object-fit: contain;
 									}
-									.assemble .project-arch-img {
-										animation: puzzleReveal 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+									.project-arch-img:hover {
+										transform: scale(1.03);
+										box-shadow: 0 8px 25px rgba(77, 184, 255, 0.6);
 									}
-									@keyframes puzzleReveal {
-										0% {
-											clip-path: polygon(0% 0%, 25% 0%, 25% 25%, 0% 25%, 50% 50%, 75% 50%, 75% 75%, 50% 75%);
-											transform: scale(0.8) translateY(20px);
-											opacity: 0;
-										}
-										100% {
-											clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 100%, 0% 100%);
-											transform: scale(1) translateY(0);
-											opacity: 1;
-										}
-									}
-									.arch-wrapper:hover .project-arch-img { transform: scale(1.03); }
 								</style>
 								
 								<h3>1. BidLock: Distributed Real-Time Bidding Engine</h3>
-								<div class="arch-wrapper" onclick="openModal('images/bidlock.png', event)">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/bidlock.png', event)">
 									<img src="images/bidlock.png" alt="BidLock Architecture" class="project-arch-img" />
-								</div>
+								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
 									<a href="#" class="button small" onclick="openModal('images/bidlock.png', event); return false;">Click to view img</a>
 								</div>
 								<p><strong>Tech Stack:</strong> Kafka, Spark Structured Streaming, Redis, Docker.<br>
-								<strong>Key Achievements:</strong> Architected a negotiation platform handling concurrent user bids with sub-millisecond latency using Redis for state. Engineered a Spark Structured Streaming pipeline to process real-time events, enforcing business logic validation.<br>
-								<strong>Challenge Solved:</strong> Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.</p>
+								<strong>Key Achievements:</strong> Architected a negotiation platform handling concurrent user bids with sub-millisecond latency using Redis for state. Engineered a Spark Structured Streaming pipeline to process real-time events, enforcing business logic validation. Eliminated race conditions during simultaneous bidding by implementing Optimistic Locking in Redis.</p>
 								<ul class="actions">
-									<li><a href="#" class="button primary" onclick="openModal('images/bidlock_preview.mp4', event); return false;">Watch Live Preview</a></li>
+									<li><a href="#" class="button" onclick="openModal('images/bidlock_preview.mp4', event); return false;">Watch Live Preview</a></li>
 									<li><a href="https://github.com/Sumer-123/BidLock" target="_blank" class="button">View GitHub</a></li>
 									<li><a href="https://youtube.com/shorts/JIEVldh9Q5c?feature=share" target="_blank" class="button">Watch Demo</a></li>
 								</ul>
@@ -122,17 +103,16 @@
 								<hr />
 
 								<h3>2. ShopPulse: Real-Time E-Commerce Data Lakehouse</h3>
-								<div class="arch-wrapper" onclick="openModal('images/shoppulse.png', event)">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/shoppulse.png', event)">
 									<img src="images/shoppulse.png" alt="ShopPulse Architecture" class="project-arch-img" />
-								</div>
+								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
 									<a href="#" class="button small" onclick="openModal('images/shoppulse.png', event); return false;">Click to view img</a>
 								</div>
 								<p><strong>Tech Stack:</strong> AWS S3, Delta Lake, PySpark.<br>
-								<strong>Key Achievements:</strong> Built a scalable ETL pipeline ingesting high-velocity clickstream logs via Kafka and Spark Streaming into a Delta Lake for ACID-compliant analytics.<br>
-								<strong>Challenge Solved:</strong> Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques like Partitioning and Z-Ordering.</p>
+								<strong>Key Achievements:</strong> Built a scalable ETL pipeline ingesting high-velocity clickstream logs via Kafka and Spark Streaming into a Delta Lake for ACID-compliant analytics. Achieved 40% faster query performance on high-velocity data by implementing storage optimization techniques.</p>
 								<ul class="actions">
-									<li><a href="#" class="button primary" onclick="openModal('images/shoppulse_preview.mp4', event); return false;">Watch Live Preview</a></li>
+									<li><a href="#" class="button" onclick="openModal('images/shoppulse_preview.mp4', event); return false;">Watch Live Preview</a></li>
 									<li><a href="https://github.com/Sumer-123/ShopPulse" target="_blank" class="button">View GitHub</a></li>
 									<li><a href="https://youtube.com/shorts/ciis83DZ8aQ" target="_blank" class="button">Watch Demo</a></li>
 								</ul>
@@ -140,17 +120,16 @@
 								<hr />
 
 								<h3>3. Modern Data Warehouse Pipeline</h3>
-								<div class="arch-wrapper" onclick="openModal('images/warehouse.png', event)">
+								<span class="image fit" style="margin-bottom: 0.5rem;" onclick="openModal('images/warehouse.png', event)">
 									<img src="images/warehouse.png" alt="Warehouse Architecture" class="project-arch-img" />
-								</div>
+								</span>
 								<div style="text-align: center; margin-bottom: 1.5rem;">
 									<a href="#" class="button small" onclick="openModal('images/warehouse.png', event); return false;">Click to view img</a>
 								</div>
 								<p><strong>Tech Stack:</strong> dbt, DuckDB, ELT, Data Modeling.<br>
-								<strong>Key Achievements:</strong> Developed a modular ELT pipeline using DuckDB for high-performance local compute and dbt for SQL-based transformations and testing. Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.<br>
-								<strong>Challenge Solved:</strong> Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.</p>
+								<strong>Key Achievements:</strong> Developed a modular ELT pipeline using DuckDB for high-performance local compute and dbt for SQL-based transformations and testing. Reduced bad data ingestion by 90% by automating rigorous data quality tests directly within the dbt workflow.</p>
 								<ul class="actions">
-									<li><a href="#" class="button primary" onclick="openModal('images/warehouse_preview.mp4', event); return false;">Watch Live Preview</a></li>
+									<li><a href="#" class="button" onclick="openModal('images/warehouse_preview.mp4', event); return false;">Watch Live Preview</a></li>
 									<li><a href="https://github.com/Sumer-123/dbt-duckdb-local-warehouse" target="_blank" class="button">View GitHub</a></li>
 									<li><a href="https://youtube.com/shorts/u37HP19YGDg" target="_blank" class="button">Watch Demo</a></li>
 								</ul>
@@ -162,9 +141,9 @@
 								<h3 class="major">Experience</h3>
 								<p><strong>Data Analytics Intern | Ceres Canopus Pvt Ltd | Pune, India</strong></p>
 								<ul>
-									<li>Optimized complex SQL queries for client reporting, reducing data retrieval time by 40%.</li>
+									<li>Optimized complex SQL queries for client reporting, reducing data retrieval time by 40% to accelerate decisions.</li>
 									<li>Automated manual daily workflows using Python scripts (Pandas), saving the team 5+ hours weekly.</li>
-									<li>Collaborated with engineering teams to validate data integrity across source systems.</li>
+									<li>Collaborated with engineering teams to validate data integrity across source systems, ensuring 100% accuracy.</li>
 								</ul>
 							</article>
 
@@ -180,6 +159,8 @@
 									<li><strong>AWS Cloud Practitioner</strong> (Udemy)</li>
 									<li><strong>AWS Data Engineering Essentials</strong> (Udemy)</li>
 									<li><strong>Data Analytics Professional Certificate</strong> (Google)</li>
+									<li><strong>AWS Cloud Practitioner Essentials</strong> (Amazon Web Services (AWS))</li>
+									<li><strong>AWS Data Engineering Foundations</strong> (Amazon Web Services (AWS))</li>
 									<li><strong>Responsible & Safe AI</strong> (NPTEL - IIT Hyderabad)</li>
 								</ul>
 							</article>
@@ -193,7 +174,7 @@
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/sumer-shinalkar-675a63209" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/Sumer-123" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:shinalkarsumer@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="mailto:shinalkarsumer@gmail.com" title="shinalkarsumer@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 								<form method="post" action="https://formspree.io/f/xeellroo">
 									<div class="fields">
@@ -218,8 +199,8 @@
 
 		<div id="bg"></div>
 
-		<div id="imageModal" style="display:none; position:fixed; z-index:100000; left:0; top:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.85); backdrop-filter:blur(5px); align-items:center; justify-content:center; flex-direction:column;" onclick="if(event.target === this) { closeModal(); }">
-			<span onclick="closeModal()" style="position:absolute; top:30px; right:40px; color:white; font-size:50px; font-weight:bold; cursor:pointer;">&times;</span>
+		<div id="imageModal" style="display:none; position:fixed; z-index:100000; left:0; top:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.85); backdrop-filter:blur(5px); align-items:center; justify-content:center; flex-direction:column;" onclick="if(event.target === this) { closeModal(event); }">
+			<span onclick="closeModal(event)" style="position:absolute; top:30px; right:40px; color:white; font-size:50px; font-weight:bold; cursor:pointer;">&times;</span>
 			<img id="modalImage" style="display:none; max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
 			<video id="modalVideo" controls style="display:none; max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.5);"></video>
 		</div>
@@ -245,24 +226,12 @@
 				modal.style.display = 'flex';
 			}
 
-			function closeModal() {
+			function closeModal(event) {
+				if (event) event.stopPropagation(); // STOPS ENTIRE SECTION FROM CLOSING
 				const modalVid = document.getElementById('modalVideo');
 				modalVid.pause();
 				modalVid.src = "";
 				document.getElementById('imageModal').style.display = 'none';
-			}
-
-			window.addEventListener('hashchange', function() {
-				if (window.location.hash === '#work') {
-					const wrappers = document.querySelectorAll('.arch-wrapper');
-					wrappers.forEach((el, index) => {
-						el.classList.remove('assemble');
-						setTimeout(() => { el.classList.add('assemble'); }, 300 * (index + 1));
-					});
-				}
-			});
-			if (window.location.hash === '#work') {
-				document.querySelectorAll('.arch-wrapper').forEach(el => el.classList.add('assemble'));
 			}
 		</script>
 
